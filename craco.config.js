@@ -1,11 +1,19 @@
 const path = require('path');
 const resolve = (arg) => path.resolve(__dirname, arg);
-const CracoAlias = require('craco-alias');
 
 module.exports = function () {
   return {
     babel: {
       plugins: [],
+    },
+    webpack: {
+      alias: {
+        '@': resolve('src'),
+        '@atom': resolve('src/components/atoms'),
+        '@molecule': resolve('src/components/molecules'),
+        '@organism': resolve('src/components/organisms'),
+        '@template': resolve('src/components/templates'),
+      },
     },
     jest: {
       configure: {
@@ -14,15 +22,5 @@ module.exports = function () {
         },
       },
     },
-    plugins: [
-      {
-        plugin: CracoAlias,
-        options: {
-          source: 'tsconfig',
-          baseUrl: './',
-          tsConfigPath: resolve('tsconfig.paths.json'),
-        },
-      },
-    ],
   };
 };
