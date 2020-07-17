@@ -2,7 +2,21 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": [
+        "src/*"
+      ],
+      "@atom/*": [
+        "src/components/atoms/*"
+      ],
+      "@molecule/*": [
+        "src/components/molcules/*"
+      ],
+      "@organism/*": [
+        "src/components/organisms/*"
+      ],
+      "@template/*": [
+        "src/components/templates/*"
+      ]
     }
   }
 }

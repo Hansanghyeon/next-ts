@@ -1,22 +1,11 @@
-const path = require('path')
-const resolve = arg => path.resolve(__dirname, arg)
+const path = require('path');
+const resolve = (arg) => path.resolve(__dirname, arg);
+const CracoAlias = require('craco-alias');
 
-module.exports = function() {
+module.exports = function () {
   return {
     babel: {
-      plugins: [
-        [
-          'emotion',
-          {
-            labelFormat: '[filename]--[local]',
-          },
-        ],
-      ],
-    },
-    webpack: {
-      alias: {
-        '@': resolve('src'),
-      },
+      plugins: [],
     },
     jest: {
       configure: {
@@ -25,5 +14,15 @@ module.exports = function() {
         },
       },
     },
-  }
-}
+    plugins: [
+      {
+        plugin: CracoAlias,
+        options: {
+          source: 'tsconfig',
+          baseUrl: './',
+          tsConfigPath: resolve('tsconfig.paths.json'),
+        },
+      },
+    ],
+  };
+};

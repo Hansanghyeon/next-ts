@@ -1,15 +1,15 @@
-import React from 'react'
+import React from 'react';
+import DefLayout from '@template/DefLayout';
+// Components
+import GNB from '@organism/GNB';
 
+const props = {
+  GNB,
+};
 export default () => {
   return (
-    <h1>
-      <a
-        href="https://github.com/JaeYeopHan/cra-template-unicorn"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        cra-template-unicorn
-      </a>
-    </h1>
-  )
-}
+    <DefLayout {...props}>
+      <h1>TODOs Base</h1>
+    </DefLayout>
+  );
+};
