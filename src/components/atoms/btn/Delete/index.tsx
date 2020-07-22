@@ -3,7 +3,7 @@ import React from 'react';
 import { Btn } from './index.style';
 
 type props = {
-  children: React.ReactNode;
+  children?: React.ReactNode;
 };
 const DeleteBtn: React.FC<props> = ({ children }: props) => {
   return <Btn>{children ? children : '삭제'}</Btn>;
