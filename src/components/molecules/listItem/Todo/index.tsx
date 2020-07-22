@@ -4,7 +4,7 @@ import { Item, Text } from './index.style';
 import UpdateBtn from '@atom/btn/Update';
 import DeleteBtn from '@atom/btn/Delete';
 
-const item: React.FC = () => {
+const TodoItem: React.FC = () => {
   return (
     <Item>
       <Text>영화보기</Text>
@@ -14,4 +14,4 @@ const item: React.FC = () => {
   );
 };
 
-export default item;
+export default TodoItem;
