@@ -9,7 +9,7 @@
         "src/components/atoms/*"
       ],
       "@molecule/*": [
-        "src/components/molcules/*"
+        "src/components/molecules/*"
       ],
       "@organism/*": [
         "src/components/organisms/*"
