@@ -6,17 +6,25 @@ import Grid from '@/styles/Grid';
 import { Container, Row, Col } from './index.style';
 
 type props = {
-  children: React.ReactNode;
-  GNB: any;
+  GNB: React.FC;
+  Title: React.FC;
+  Main: React.FC;
 };
-const DefLayout: React.FC<props> = ({ children, GNB }: props) => {
+const DefLayout: React.FC<props> = ({ GNB, Title, Main }: props) => {
   return (
     <Grid>
       <Theme>
-        {GNB()}
+        <GNB />
         <Container.Main>
+          <Row.Header>
+            <Col.Def col>
+              <Title />
+            </Col.Def>
+          </Row.Header>
           <Row.Def>
-            <Col.Def col>{children}</Col.Def>
+            <Col.Def col>
+              <Main />
+            </Col.Def>
           </Row.Def>
         </Container.Main>
       </Theme>

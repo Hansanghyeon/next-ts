@@ -15,6 +15,9 @@ export const Container = {
 
 export const Row = {
   Def: styled(_Row)``,
+  Header: styled(_Row)`
+    margin-bottom: 40px;
+  `,
 };
 
 export const Col = {
