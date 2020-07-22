@@ -1,5 +1,5 @@
 import React from 'react';
-import DefLayout from '@template/DefLayout';
+import DefLayout from '@template/Layout/Def';
 // Components
 import GNB from '@organism/GNB';
 

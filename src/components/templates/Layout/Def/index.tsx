@@ -1,8 +1,9 @@
 import React from 'react';
-import { Container, Row, Col } from 'styled-bootstrap-grid';
 // provider
 import Theme from '@/styles/Theme';
 import Grid from '@/styles/Grid';
+// component
+import { Container, Row, Col } from './index.style';
 
 type props = {
   children: React.ReactNode;
@@ -13,11 +14,11 @@ const DefLayout: React.FC<props> = ({ children, GNB }: props) => {
     <Grid>
       <Theme>
         {GNB()}
-        <Container>
-          <Row>
-            <Col col>{children}</Col>
-          </Row>
-        </Container>
+        <Container.Main>
+          <Row.Def>
+            <Col.Def col>{children}</Col.Def>
+          </Row.Def>
+        </Container.Main>
       </Theme>
     </Grid>
   );
