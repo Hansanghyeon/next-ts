@@ -1,17 +1,16 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import { Provider } from 'react-redux'
-import { Router } from 'react-router-dom'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Router } from 'react-router-dom';
+import { RecoilRoot } from 'recoil';
 
-import App from '@/components/App'
-import store from '@/features'
-import history from '@/utils/history'
+import App from '@/components/App';
+import history from '@/utils/history';
 
 ReactDOM.render(
-  <Provider store={store}>
+  <RecoilRoot>
     <Router history={history}>
       <App />
     </Router>
-  </Provider>,
+  </RecoilRoot>,
   document.getElementById('root'),
-)
+);
