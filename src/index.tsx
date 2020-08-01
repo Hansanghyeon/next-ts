@@ -1,14 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router } from 'react-router-dom';
+import { RecoilRoot } from 'recoil';
 
 import App from '@/components/App';
-// import store from '@/features'
 import history from '@/utils/history';
 
 ReactDOM.render(
-  <Router history={history}>
-    <App />
-  </Router>,
+  <RecoilRoot>
+    <Router history={history}>
+      <App />
+    </Router>
+  </RecoilRoot>,
   document.getElementById('root'),
 );
