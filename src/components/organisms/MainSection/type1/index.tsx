@@ -2,7 +2,7 @@ import React from 'react';
 // components
 import { Container, Row, Col, Title } from './index.style';
 import AddBtn from '@atom/btn/Add';
-import TodoList from '@organism/TodoList';
+import TodoList from '@organism/Todo/TodoList';
 
 const MainSection1 = () => {
   return (
