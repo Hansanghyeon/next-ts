@@ -5,7 +5,9 @@
   "scripts": {
     "start": "next dev",
     "build": "next build",
-    "server": "next start"
+    "server": "next start",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "@types/styled-components": "^5.1.0",
@@ -21,9 +23,25 @@
     "styled-components": "^5.1.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.11.1",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-react": "^7.10.4",
+    "@storybook/addon-actions": "^5.3.19",
+    "@storybook/addon-docs": "^5.3.19",
+    "@storybook/addon-knobs": "^5.3.19",
+    "@storybook/addon-links": "^5.3.19",
+    "@storybook/addon-viewport": "^5.3.19",
+    "@storybook/addons": "^5.3.19",
+    "@storybook/react": "^5.3.19",
+    "@storybook/storybook-deployer": "^2.8.6",
+    "@storybook/theming": "^5.3.19",
     "@types/node": "^14.0.14",
     "@types/react": "^16.9.41",
+    "babel-loader": "^8.1.0",
+    "babel-preset-react-app": "^9.1.2",
+    "themeprovider-storybook": "^1.5.1",
     "tsconfig-paths-webpack-plugin": "^3.2.0",
-    "typescript": "^3.9.6"
+    "typescript": "^3.9.6",
+    "webpack": "^4.44.1"
   }
 }

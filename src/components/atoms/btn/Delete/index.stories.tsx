@@ -1,0 +1,21 @@
+import React from 'react';
+import { withKnobs, text } from '@storybook/addon-knobs';
+// components
+import CenterWrap from '@atom/wrap/Center';
+import DeleteBtn from '.';
+
+export default {
+  title: '01. Atoms/Button/Delete',
+  component: DeleteBtn,
+  decorators: [
+    withKnobs,
+    (storyFn: any) => (
+      <CenterWrap style={{ padding: 0 }}>{storyFn()}</CenterWrap>
+    ),
+  ],
+};
+
+export const standard = () => {
+  const Text = text('text', '');
+  return <DeleteBtn>{Text}</DeleteBtn>;
+};
