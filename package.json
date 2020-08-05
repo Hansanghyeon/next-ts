@@ -1,19 +1,22 @@
 {
   "name": "todos",
-  "version": "0.1.0",
+  "version": "1.0.1",
   "private": true,
+  "author": "Hansanghyeon",
+  "homepage": "github.com/hapas-io/TODOs",
   "scripts": {
     "start": "next dev",
     "build": "next build",
     "server": "next start",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-sb": "build-storybook",
+    "deploy-sb": "storybook-to-ghpages -o .out"
   },
   "dependencies": {
     "@types/styled-components": "^5.1.0",
     "date-fns": "^2.11.1",
     "gray-matter": "^4.0.2",
-    "next": "9.3.5",
+    "next": "^9.5.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "recoil": "0.0.10",
