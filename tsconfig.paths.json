@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "baseUrl": "./",
+    "baseUrl": ".",
     "paths": {
       "@/*": [
         "src/*"
@@ -16,7 +16,10 @@
       ],
       "@template/*": [
         "src/components/templates/*"
-      ]
+      ],
+      "@style/*": [
+        "src/styles/*"
+      ],
     }
   }
 }
