@@ -1,16 +1,24 @@
 import React from 'react';
+// components
 import DefLayout from '@template/Layout/Def';
-// Components
 import GNB from '@organism/GNB';
 import TodoList from '@organism/Todo/TodoList';
 
-const Title: React.FC = () => <h1>TODOs Base</h1>;
-export default () => {
+const Title: React.FC = () => <>Title</>;
+const Main: React.FC = () => <TodoList />;
+const Home = () => {
   const props = {
     GNB,
     Title,
-    Main: () => <TodoList />,
+    Main,
   };
-
   return <DefLayout {...props} />;
 };
+
+export default Home;
+
+export async function getStaticProps() {
+  return {
+    props: {},
+  };
+}

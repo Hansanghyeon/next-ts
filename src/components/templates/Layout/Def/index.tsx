@@ -1,7 +1,7 @@
 import React from 'react';
 // provider
-import Theme from '@/styles/Theme';
-import Grid from '@/styles/Grid';
+import Theme from '@style/Theme';
+import Grid from '@style/Grid';
 // component
 import { Container, Row, Col } from './index.style';
 
