@@ -18,11 +18,5 @@ export default {
 };
 
 export const standard = () => {
-  const Title = text('타이틀', 'GNB');
-  const props = {
-    data: {
-      title: Title,
-    },
-  };
-  return <GNB {...props} />;
+  return <GNB />;
 };

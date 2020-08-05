@@ -6,19 +6,14 @@ import { Container, Row, Col } from './index.style';
 
 const MenuBtn = () => <div>MenuBtn</div>;
 
-type Props = {
-  data: {
-    title: string;
-  };
-};
-const GNB: React.FC<Props> = ({ data }: Props) => {
-  const { title } = data;
+const GNB: React.FC = () => {
   return (
     <Container.Wrap fluid>
       <Container.Def>
         <Row.Def>
           <Col.Def>
             <div />
+            <div>title</div>
             <MenuBtn />
           </Col.Def>
         </Row.Def>
