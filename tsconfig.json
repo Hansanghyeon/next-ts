@@ -1,4 +1,7 @@
 {
+  "file": [
+    "./global.d.ts"
+  ],
   "include": [
     "./src/**/*.tsx",
     "./src/**/*.ts"
