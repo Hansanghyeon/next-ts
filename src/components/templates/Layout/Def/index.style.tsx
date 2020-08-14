@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 import {
   Container as _Container,
   Row as _Row,
@@ -23,3 +23,9 @@ export const Row = {
 export const Col = {
   Def: styled(_Col)``,
 };
+
+export const GlobalStyle = createGlobalStyle`
+  body {
+    background: #e9ecef;
+  }
+`;
