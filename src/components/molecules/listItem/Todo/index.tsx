@@ -1,45 +1,46 @@
-import React from 'react';
-import { useRecoilState } from 'recoil';
-import { todoListState } from '@/recoil/todo';
+import React, { useState } from 'react';
 // components
-import { ListItem, CompletedBtn, CompletedMask } from './index.style';
+import DragBtn from '@atom/btn/Drag';
+import {
+  ListItem,
+  CompletedBtn,
+  CompletedMask,
+  TextBox,
+  DragControler,
+} from './index.style';
 
-const TodoItem = ({ item }: any) => {
-  const [todoList, setTodoList] = useRecoilState(todoListState);
+const TodoItem = () => {
+  const [value, setValue] = useState('');
+  const [done, setDone] = useState(false);
 
-  const editItemText = ({ target: { value } }: any) => {
-    const newList: any = todoList.map((listItem: any) =>
-      listItem.id === item.id ? { ...listItem, text: value } : listItem,
-    );
-    setTodoList(newList);
+  const handleValue = ({
+    target: { value },
+  }: {
+    target: { value: string };
+  }) => {
+    setValue(value);
   };
 
-  const toggleItemCompletion = () => {
-    const newList: any = todoList.map((listItem: any) =>
-      listItem.id === item.id
-        ? { ...listItem, isComplete: !item.isComplete }
-        : listItem,
-    );
-    // id가 같은 것은 ㅑㄴComplete를 업데이트하고 아닌 것은 그대로 넣는 list를 만들어 set 해줌
-    setTodoList(newList);
-  };
-
-  const deleteItem = () => {
-    const newList = todoList.filter((listItem: any) => listItem.id !== item.id);
-    // id가 다른 것들만 filter하여 set해준다.
-    setTodoList(newList);
+  const handleDone = ({ target }: { target: HTMLInputElement }) => {
+    setDone(target.checked);
   };
 
   return (
-    <ListItem>
-      <input type="text" value={item.text} onChange={editItemText} />
-      <CompletedMask checked={item.isComplete} />
-      <CompletedBtn
-        type="checkbox"
-        checked={item.isComplete}
-        onChange={toggleItemCompletion}
+    <ListItem animate={done ? 'open' : 'closed'}>
+      <DragControler>
+        <DragBtn />
+      </DragControler>
+      <TextBox
+        type="text"
+        value={value}
+        onChange={handleValue}
+        placeholder="New TODOs"
       />
-      <button onClick={deleteItem}>X</button>
+      <CompletedMask.Component
+        checked={done}
+        variants={CompletedMask.variants}
+      />
+      <CompletedBtn type="checkbox" onChange={handleDone} />
     </ListItem>
   );
 };
