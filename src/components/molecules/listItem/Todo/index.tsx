@@ -10,11 +10,11 @@ import {
 } from './index.style';
 
 type props = {
-  dataValue?: string;
+  content?: string;
   isDone?: boolean;
 };
-const TodoItem: React.FC<props> = ({ dataValue, isDone = false }: props) => {
-  const [value, setValue] = useState(dataValue);
+const TodoItem: React.FC<props> = ({ content, isDone = false }: props) => {
+  const [value, setValue] = useState(content);
   const [done, setDone] = useState(isDone);
 
   const handleValue = ({
