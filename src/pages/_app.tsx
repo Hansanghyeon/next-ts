@@ -1,16 +1,11 @@
 import { AppProps } from 'next/app';
-import Head from 'next/head';
-import { RecoilRoot } from 'recoil';
+// import Head from 'next/head';
 
-const name = '[Your Name]';
+// const name = '[Your Name]';
 export const siteTitle = 'Next.js Sample Website';
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return (
-    <RecoilRoot>
-      <Component {...pageProps} />
-    </RecoilRoot>
-  );
+  return <Component {...pageProps} />;
 }
 
 export default MyApp;
