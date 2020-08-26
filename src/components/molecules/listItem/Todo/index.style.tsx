@@ -9,6 +9,7 @@ export const ListItem = styled(motion.div)`
   border-radius: 9px;
   height: 48px;
   overflow: hidden;
+  margin-bottom: 8px;
 `;
 
 export const TextBox = styled.input`

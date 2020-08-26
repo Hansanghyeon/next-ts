@@ -9,9 +9,13 @@ import {
   DragControler,
 } from './index.style';
 
-const TodoItem = () => {
-  const [value, setValue] = useState('');
-  const [done, setDone] = useState(false);
+type props = {
+  dataValue?: string;
+  isDone: boolean;
+};
+const TodoItem: React.FC<props> = ({ dataValue, isDone = false }: props) => {
+  const [value, setValue] = useState(dataValue);
+  const [done, setDone] = useState(isDone);
 
   const handleValue = ({
     target: { value },
