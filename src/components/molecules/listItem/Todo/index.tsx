@@ -11,7 +11,7 @@ import {
 
 type props = {
   dataValue?: string;
-  isDone: boolean;
+  isDone?: boolean;
 };
 const TodoItem: React.FC<props> = ({ dataValue, isDone = false }: props) => {
   const [value, setValue] = useState(dataValue);
