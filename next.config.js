@@ -1,4 +1,5 @@
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
 
 module.exports = {
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
@@ -11,6 +12,7 @@ module.exports = {
         configFile: './tsconfig.json',
       }),
     );
+    config.plugins.push(new Dotenv({ silent: true }));
 
     return config;
   },
