@@ -4,7 +4,6 @@ import firebaseConfig from '@/firebase/config';
 try {
   firebase.app();
 } catch (error) {
-  console.log(firebaseConfig);
   firebase.initializeApp(firebaseConfig);
 }
 
